@@ -1,11 +1,11 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 int main(int argc, char** argv){
-int a, b, c,m,v,d, operacao;
-float n1,n2,n3,x;
-char resposta;
-	x=n2*n3/n1;
+int a, b, c,m,v,d, operacao ,n1,n2,n3;
+float x;
 
+char resposta;
 do{
 	cout<<"Desenvolvido por: Pedro H.A de Souza \n"<<endl;
 cout<<"Que operacao deseja fazer? Digite:\n \n1: para Adicao\t2: para Subtracao\t3: para Multiplicacao \t4: para Divisao \n5: para Regra de 3 obs: (nesse caso) ignore o primeiro e segundo valor que sera solicitado\n\n=>";
@@ -34,17 +34,16 @@ switch (operacao){
        	cin>>n2;
        	cout<<"Digite o valor de n3 ";
        	cin>>n3;
-       
+         x=(n2*n3)/n1;
        	cout<<"Resultado :"<<x<<endl;
        	break;
-       	
        default :
        cout<<" Voce digito um numero invalido "<<endl;
        }
-       cout<<" o resultado e: "<<c<<endl;
+       cout<<" o resultado e: "<<x<<endl;
        cout<<"deseja continuar (s/n)"<<endl;
        cin>>resposta;
-      } while (resposta=='s');
+      } while (getch()=='s');
         system ("pause");
         return 0;
         }
